@@ -1,0 +1,16 @@
+<?output "../includes-gen/recent-posts.html"?>
+<?nextrec?>
+<h2>&ldquo;<a href="=$title&f$=.html">=$title$=</a>&rdquo;</h1>
+
+<?if "=$image-name$=" ?>
+<p>
+	<a href="=$title&f$=.html">
+		<img class="img-fluid rounded" src="images/=$image-name&f$=" alt="=$image-alt$=">
+	</a>
+</p>
+<?endif?>
+
+=$body&s1000o$=
+
+<p><em><a href="=$title&f$=.html">Read more...</a></em></p>
+<?loop?>

@@ -1,0 +1,51 @@
+module	action	modifier	object	value
+
+<!-- Read the content notes for the website  -->
+
+input	set		xpltags	false
+input	set		dirdepth	1
+input	open	notenik-defined		#PATH#../
+
+<!-- Sort posts in descending order by date of post  -->
+
+sort	clear			
+sort	add	descending	Date of Essay	
+sort	add	ascending	Title	
+sort	set		params	
+
+<!-- Filter to include only posts  -->
+
+filter	clear			
+filter	add	eq	Class	post
+filter	set		params	
+
+<!-- Process Merge Templates for posts  -->
+
+template	webroot			/Users/hbowie/Sites/lexicon-of-song
+template	open			#PATH#templates/recent-posts.html
+template	generate			
+template	open			#PATH#templates/post-page.html
+template	generate			
+
+<!-- Filter to include only posts  -->
+
+filter	clear			
+filter	set		params	
+filter	clear			
+filter	add	eq	Class	index
+filter	set		params	
+
+<!-- Process Merge Template for index page  -->
+
+template	webroot			/Users/hbowie/Sites/lexicon-of-song
+template	open			#PATH#templates/index-page.html
+template	generate			
+
+<!-- Generate default css  -->
+
+template	open			#PATH#templates/css-starter.css
+template	generate			
+
+<!-- Open the site in default web browser -->
+
+browse	open	url		http://localhost/~hbowie/lexicon-of-song/

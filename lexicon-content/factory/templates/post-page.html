@@ -1,0 +1,39 @@
+<?nextrec?>
+<?output "../../../=$title&f$=.html"?>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>=$title$= | Lexicon of Song</title>
+		<meta name="description" content='An Essay on the Song "=$title$="' />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<?include "../includes/head-links.html" ?>
+	</head>
+	<body>
+		<div id="wrapper">
+
+<?include "../includes/header.html" ?>
+
+<h1>&ldquo;=$title$=&rdquo;</h1>
+
+<?if "=$image-name$=" ?>
+<p>
+	<img class="img-fluid rounded" src="=$relative$=images/=$image-name&f$=" alt="=$image-alt$=">
+</p>
+<?endif?>
+
+<?copyfile "../../files/=$imagename$=" "../../../images/=$imagename&f$=" ?>
+
+<p><em>Song written by =$songwriters$= in =$date-of-song$=</em></p>
+
+<p><em>Essay written by =$author-of-essay$= on =$date-of-essay$=</em></p>
+
+=$body&o$=
+
+=$apple-music-player$=
+
+		</div>  <!-- end of wrapper div -->
+
+</body>
+</html>
+<?loop?>
