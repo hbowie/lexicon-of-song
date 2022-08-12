@@ -14,21 +14,81 @@
 
 <?include "../includes/header.html" ?>
 
-<h1>&ldquo;=$title$=&rdquo;</h1>
+<?include "../includes/nav-menu.html" ?>
 
-<?if "=$image-name$=" ?>
-<p>
-	<img class="img-fluid rounded" src="=$relative$=images/=$image-name&f$=" alt="=$image-alt$=">
-</p>
-<?endif?>
+<table class="song-table">
+	<tr class="song-row">
+		<td colspan="2">
+			<p class="song-info-label">
+				Song Title:
+			</p>
+			<h1 class="song-title">
+				=$title$=
+			</h1>
+		</td>
+	</tr>
+	<tr class="song-row">
+		<td>
+			<p class="song-info-label">
+				Songwriter(s):
+			</p>
+			<p class="song-info-value">
+				=$songwriters$=
+			</p>
+		</td>
+		<td>
+			<p class="song-info-label">
+				Year Written:
+			</p>
+			<p class="song-info-value">
+				=$date-of-song$=
+			</p>
+		</td>
+	</tr>
+	<tr class="song-row">
+		<td>
+			<p class="song-info-label">
+				Appreciation by:
+			</p>
+			<p class="song-info-value">
+				=$author-of-essay$=
+			</p>
+		</td>
+		<td>
+			<p class="song-info-label">
+				Appreciation written:
+			</p>
+			<p class="song-info-value">
+				=$date-of-essay$=
+			</p>
+		</td>
+	</tr>
+	<tr class="song-row">
+		<td>
+			<p class="song-info-label">
+				Topics:
+			</p>
+			<p class="song-info-value">
+				=$tags$=
+			</p>
+		</td>
+		<td>
+			<p class="song-info-label">
+				Minutes to Read:
+			</p>
+			<p class="song-info-value">
+				=$minutes-to-read$=
+			</p>
+		</td>
+	</tr>
+</table>
 
 <?copyfile "../../files/=$imagename$=" "../../../images/=$imagename&f$=" ?>
 
-<p><em>Song written by =$songwriters$= in =$date-of-song$=</em></p>
-
-<p><em>Essay written by =$author-of-essay$= on =$date-of-essay$=</em></p>
-
-=$body&o$=
+<div class="lex-content">
+<img class="song-image" src="=$relative$=images/=$image-name&f$=" alt="=$image-alt$=">
+=$body&w1o$=
+</div>
 
 =$apple-music-player$=
 

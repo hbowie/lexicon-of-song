@@ -1,0 +1,54 @@
+<?output "../../../songs.html"?>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>List of Songs | Lexicon of Song</title>
+		<meta name="description" content="List of Songs discussed on Lexicon of Song" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<?include "../includes/head-links.html" ?>
+	</head>
+	<body>
+		<div id="wrapper">
+
+<?include "../includes/header.html" ?>
+
+							<div id="nav-menu">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="songs.html" class="active">Songs</a></li>
+									<li><a href="topics.html">Topics</a></li>
+									<li><a href="alphabetical-index.html">Index</a></li>
+									<li><a href="about.html">About</a></li>
+								</ul>
+							</div>
+
+<h2>List of Songs</h2>
+
+<div class="lex-content">
+<table>
+	<thead>
+		<tr>
+			<th>Title of Song</th>
+			<th>Year Written</th>
+			<th>Songwriters</th>
+		</tr>
+	</thead>
+	<tbody>
+
+<?nextrec?>
+		<tr>
+			<td><a href="=$title&f$=.html">=$title$=</a></td>
+			<td>=$date-of-song$=</td>
+			<td>=$songwriters$=</td>
+		</tr>
+<?loop?>
+
+	</tbody>
+</table>
+</div> <!  end of lex-content div -->
+
+		</div>  <!-- end of wrapper div -->
+		
+	</body>
+</html>

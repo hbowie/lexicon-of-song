@@ -27,7 +27,33 @@ template	generate
 template	open			#PATH#templates/post-page.html
 template	generate			
 
-<!-- Filter to include only posts  -->
+<!-- Sort posts in ascending order by title  -->
+
+sort	clear			
+sort	add	ascending	Title	
+sort	set		params	
+
+<!-- Process Merge Template for posts sorted by title  -->
+
+template	webroot			/Users/hbowie/Sites/lexicon-of-song
+template	open			#PATH#templates/songs-table.html
+template	generate			
+
+<!-- Filter to include only basic pages  -->
+
+filter	clear			
+filter	set		params	
+filter	clear			
+filter	add	eq	Class	page
+filter	set		params	
+
+<!-- Process Merge Template for basic pages  -->
+
+template	webroot			/Users/hbowie/Sites/lexicon-of-song
+template	open			#PATH#templates/basic-page.html
+template	generate			
+
+<!-- Filter to include only index page  -->
 
 filter	clear			
 filter	set		params	

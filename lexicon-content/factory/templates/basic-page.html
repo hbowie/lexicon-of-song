@@ -1,11 +1,11 @@
 <?nextrec?>
-<?output "../../../index.html"?>
+<?output "../../../=$title&f$=.html"?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>=$title$=</title>
-		<meta name="description" content="Lexicon of Song" />
+		<title>=$title$= | Lexicon of Song</title>
+		<meta name="description" content="=$title$= Lexicon of Song" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <?include "../includes/head-links.html" ?>
 	</head>
@@ -16,20 +16,31 @@
 
 							<div id="nav-menu">
 								<ul>
-									<li><a class="active" href="index.html">Home</a></li>
+									<li><a href="index.html">Home</a></li>
 									<li><a href="songs.html">Songs</a></li>
+<?if =$title$= eq Topics ?>
+									<li><a href="topics.html" class="active">Topics</a></li>
+<?else?>
 									<li><a href="topics.html">Topics</a></li>
+<?endif?>
+<?if "=$title$=" eq "Alphabetical Index" ?>
+									<li><a href="alphabetical-index.html" class="active">Index</a></li>
+<?else?>
 									<li><a href="alphabetical-index.html">Index</a></li>
+<?endif?>
+<?if =$title$= eq About ?>
+									<li><a href="about.html" class="active">About</a></li>
+<?else?>
 									<li><a href="about.html">About</a></li>
+<?endif?>
 								</ul>
 							</div>
 
+<h2>=$title$=</h2>
+
 <div class="lex-content">
-<p>   </p>
 =$body&w1o$=
 </div>
-
-<?include "../includes-gen/recent-posts.html" ?>
 
 		</div>  <!-- end of wrapper div -->
 		

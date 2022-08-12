@@ -1,32 +1,140 @@
+/* --------------------------------------------------
+
+	Global Settings and Media Queries
+
+* -------------------------------------------------- */
+
 :root {
     color-scheme: light dark;
     --background-color: #FFFFFF;
     --text-color: #000000;
-    --link-color: Blue;
-    --highlight-color: Gainsboro
+    --link-color: #0000F0;
+	  --subtle-link-color: #0000FF;
+    --highlight-color: Gainsboro;
+    --red-text-color: #8A4D4C;
+    --navbg-color: #F8F9FA;
+    --nav-color: #707070;
 }
 @media screen and (prefers-color-scheme: dark) { 
   :root {
     --background-color: #000000;
     --text-color: #F0F0F0;
     --link-color: #93d5ff;
-    --highlight-color: DimGray
+    --subtle-link-color: #b6e2ff;
+    --highlight-color: DimGray;
+    --red-text-color: #C06E6C;
+    --nav-color: #C06E6C;
+    --navbg-color: #202020;
+    --navbg-color-hover: #303030;
+    --navbg-color-active: #404040;
   }
 }
-a {
-    color: var(--link-color);
-}
+
 .search-results {
     background-color: var(--highlight-color);
 }
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/* --------------------------------------------------
+
+	Body and Paragraphs
+	
+ * -------------------------------------------------- */
+
 body { 
+	float: none;
+  max-width: 33em;
+  padding: 1rem 0.5rem;
   tab-size: 4; 
-  margin: 1em; 
+  margin: 0 auto; 
   background-color: var(--background-color);
   color: var(--text-color); 
-	font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14pt
+  font-family: 'equity-text', Georgia, 'Times New Roman', Times, serif;
+	font-size: 16pt;
+	line-height: 140%;
 }
+
+p {
+	margin-block-start: 0.5em;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
+/* --------------------------------------------------
+
+	Links
+
+* -------------------------------------------------- */
+
+a {
+    color: var(--link-color);
+}
+
+a.subtle-link { 
+	color: var(--subtle-link-color); 
+	text-decoration: none;
+}
+
+a.invisi-link { 
+	color: inherit; 
+	text-decoration: none;
+}
+
+.lex-content a:link {
+	color: var(--subtle-link-color);
+	text-decoration: none;
+	border-bottom: 1px var(--subtle-link-color) dotted;
+}
+
+.lex-content a:visited {
+	color: var(--subtle-link-color);
+	text-decoration: none;
+}
+
+.lex-content a:active {
+	color: var(--subtle-link-color);
+	text-decoration: none;
+}
+
+.lex-content a:hover {
+	color: var(--subtle-link-color);
+	text-decoration: none;
+	border-bottom: 1px var(--link-color) dotted;
+}
+
+/* --------------------------------------------------
+
+	Tables
+
+* -------------------------------------------------- */
+
+table { 
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+  border-collapse: collapse; 
+  font-family: 'concourse-text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  line-height: 1.428571429;
+  color: var(--text-color);
+} 
+
+table, th, td { 
+  border: 2px solid gray; 
+} 
+
+th, td { 
+  padding: 6px; 
+} 
 
 /* --------------------------------------------------
 
@@ -37,7 +145,9 @@ Page Header (Masthead)
 header {
 	display: flex;
 	flex-direction: row;
+	margin-top: 0.1rem;
 	margin-bottom: 0;
+	padding-top: 0.5rem;
 	padding-bottom: 1rem;
 }
 
@@ -56,19 +166,170 @@ header {
 }
 
 .header-logo-image {
-	max-width: 64px;
-	margin-right: 16px;
+	max-width: 96px;
+	margin-right: 24px;
+	border: 0;
+	border-radius: 20px;
+}
+
+#header-title-and-nav {
+	flex-direction: column;
 }
 
 #header-title { 
-	font-family: 'concourse_t4regular', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 3rem;
+	font-family: 'concourse_t6regular', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 2.5rem;
+	margin-top: 0.2rem;
 }
 
 #header-slogan {
 	font-family: 'concourse_t4italic', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 1.5rem;
-	margin-bottom: 1rem;
+	font-size: 1.8rem;
+	margin-top: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------
+
+  Navigation Menu
+
+* -------------------------------------------------- */
+
+#nav-menu {
+  font-family: 'concourse_t2regular', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#nav-menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-inline-start: 0;
+	overflow: hidden;
+	background-color: var(--navbg-color);
+	border-radius: 20px;
+}
+
+#nav-menu li {
+	float: left;
+}
+
+#nav-menu a {
+	display: block;
+	color: var(--nav-color);
+	text-align: center;
+	padding: 14px 14px; 
+	text-decoration: none;
+}
+
+#nav-menu a:hover {
+  background-color: var(--navbg-color-hover);
+}
+
+.active {
+	background-color: var(--navbg-color-active);
+}
+
+/* --------------------------------------------------
+
+	Headings
+	
+ * -------------------------------------------------- */
+ 
+ h1, h2, h3, h4, h5, h6 {
+	font-family: 'concourse_t4regular', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+ 
+h1 { font-size: 2.0em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
+h2 { font-size: 1.8em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
+
+h3 { 
+	font-size: 1.5em; 
+	margin-top: 0.7em; 
+	margin-bottom: 0.0em; 
+	font-weight: 600; 
+	color: var(--red-text-color);  
+	font-family: 'concourse_t4italic', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h4 { font-size: 1.4em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
+h5 { font-size: 1.2em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
+h6 { font-size: 1.0em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
+
+/* --------------------------------------------------
+
+	Song Header
+	
+ * -------------------------------------------------- */
+ 
+table.song-table {
+ 	width: 100%;
+ 	font-family: inherit;
+ }
+ 
+table.song-table { 
+  border: 0; 
+} 
+
+.song-table td {
+	padding: 3px;
+	vertical-align: top;
+	border: 0;
+}
+
+.song-row {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+ 
+.song-title {
+	font-size: 1.8em;
+	margin-left: 0;
+	margin-top: 0;
+	font-family: inherit;
+	font-weight: normal;
+	margin-bottom: 0.4em;
+}
+
+.song-title-slug {
+	font-size: 1.8em;
+	margin-left: 0;
+	margin-top: 1em;
+	font-family: inherit;
+	font-weight: normal;
+	margin-bottom: 0.6em;
+}
+
+.song-info-label {
+	font-size: 0.8em;
+	font-weight: 400;
+	font-style: italic;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.song-info-value {
+	margin-top: 0;
+	margin-bottom: 0.3em;
+}
+
+img.song-image {
+	max-width: 13em;
+	height: auto;
+	float: right;
+	padding: 0;
+	border: 4px solid gray;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 1.2em;
+	margin-left: 1.2em;
+}
+
+.read-more {
+	font-style: italic;
 }
 
 blockquote { 
@@ -80,25 +341,12 @@ figure {
   margin-left: 0.2em;
   padding-left: 0.2em;
 } 
-table, th, td { 
-  border: 2px solid gray; 
-} 
-table { 
-  border-collapse: collapse; 
-} 
-th, td { 
-  padding: 6px; 
-} 
+
 img { 
   max-width: 100%; 
   height: auto; 
 } 
-h1 { font-size: 2.0em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
-h2 { font-size: 1.8em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
-h3 { font-size: 1.6em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
-h4 { font-size: 1.4em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
-h5 { font-size: 1.2em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
-h6 { font-size: 1.0em; margin-top: 0.7em; margin-bottom: 0.0em; font-weight: 600; font-style: normal;  }
+
 ul.checklist { list-style-type: none; }
 ul.tags-list { list-style-type: none; }
 ul.tags-cloud { 
@@ -124,4 +372,12 @@ ul.tags-cloud a {
   text-align: center; 
 } 
 img { max-width: 100%; border: 4px solid gray; }
-body { max-width: 33em; margin: 0 auto; float: none; }
+
+img.cc-image {
+	height:22px!important;
+	width: auto;
+	margin-left:3px;
+	vertical-align:text-bottom;
+	border: 0; 
+}
+
