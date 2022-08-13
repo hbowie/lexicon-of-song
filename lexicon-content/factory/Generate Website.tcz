@@ -26,6 +26,8 @@ template	open			#PATH#templates/recent-posts.html
 template	generate			
 template	open			#PATH#templates/post-page.html
 template	generate			
+template	open			#PATH#templates/rss.xml
+template	generate			
 
 <!-- Sort posts in ascending order by title  -->
 

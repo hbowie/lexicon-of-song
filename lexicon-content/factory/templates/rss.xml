@@ -1,0 +1,31 @@
+<?output "../../../rss.xml"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+	<title>Lexicon of Song</title>
+	<description>Examining the meanings and workings of great songs</description>
+	<link>https://lexiconofsong.org</link>
+	<language>en-us</language>
+	<managingEditor>hb@lexiconofsong.org (Herb Bowie)</managingEditor>
+	<webMaster>hb@lexiconofsong.org (Herb Bowie)</webMaster>
+	<lastBuildDate>=$today&EEE, dd MMM yyyy HH:mm zzz$=</lastBuildDate>
+	<pubDate>=$today&EEE, dd MMM yyyy HH:mm zzz$=</pubDate>
+	<atom:link href="https://lexiconofsong/rss.xml" rel="self" type="application/rss+xml" />
+	<ttl>1440</ttl>
+<?set item-count = 0 ?>
+<?nextrec?>
+<?set item-count ++ ?>
+<?if =$item-count$= < 21 ?>
+	<item>
+		<title>An Appreciation for the song &quot;=$title&x$=&quot;</title>
+		<link>https://lexiconofsong.org/=$title&fx$=.html</link>
+		<guid isPermaLink="true">https://lexiconofsong.org/=$title&fx$=.html</guid>
+		<pubDate>=$date-of-essay&EEE, dd MMM yyyy HH:mm zzz$=</pubDate>
+		<description>
+			=$body&w1s1000ox$=
+		</description>
+	</item>
+<?endif?>
+<?loop?>
+</channel>
+</rss>
