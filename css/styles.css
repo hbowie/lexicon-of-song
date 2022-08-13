@@ -12,8 +12,10 @@
 	  --subtle-link-color: #0000FF;
     --highlight-color: Gainsboro;
     --red-text-color: #8A4D4C;
-    --navbg-color: #F8F9FA;
-    --nav-color: #707070;
+    --nav-color: #8B4E4E;
+    --navbg-color: #E0E0E0;
+    --navbg-color-hover: #B0B0B0;
+    --navbg-color-active: #C0C0C0;
 }
 @media screen and (prefers-color-scheme: dark) { 
   :root {
@@ -65,9 +67,30 @@ p {
 	margin-block-start: 0.5em;
 }
 
+/* --------------------------------------------------
+
+	Images
+
+* -------------------------------------------------- */
+
 img {
 	width: 100%;
 	max-width: 100%;
+	border: 4px solid gray; 
+}
+
+img.apple-music {
+	border: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.cc-image {
+	height:22px!important;
+	width: auto;
+	margin-left:3px;
+	vertical-align:text-bottom;
+	border: 0; 
 }
 
 /* --------------------------------------------------
@@ -78,16 +101,6 @@ img {
 
 a {
     color: var(--link-color);
-}
-
-a.subtle-link { 
-	color: var(--subtle-link-color); 
-	text-decoration: none;
-}
-
-a.invisi-link { 
-	color: inherit; 
-	text-decoration: none;
 }
 
 .lex-content a:link {
@@ -110,6 +123,41 @@ a.invisi-link {
 	color: var(--subtle-link-color);
 	text-decoration: none;
 	border-bottom: 1px var(--link-color) dotted;
+}
+
+a.subtle-link { 
+	color: var(--subtle-link-color); 
+	text-decoration: none;
+}
+
+a.invisi-link { 
+	color: inherit; 
+	text-decoration: none;
+	border-bottom: 0;
+}
+
+.apple-music {
+	text-align: center
+}
+
+.apple-music a:link {
+	text-decoration: none;
+	border-bottom: 0;
+}
+
+.lex-content a:visited {
+	text-decoration: none;
+	border-bottom: 0;
+}
+
+.lex-content a:active {
+	text-decoration: none;
+	border-bottom: 0;
+}
+
+.lex-content a:hover {
+	text-decoration: none;
+	border-bottom: 0;
 }
 
 /* --------------------------------------------------
@@ -371,13 +419,5 @@ ul.tags-cloud a {
   min-width: 40px; 
   text-align: center; 
 } 
-img { max-width: 100%; border: 4px solid gray; }
 
-img.cc-image {
-	height:22px!important;
-	width: auto;
-	margin-left:3px;
-	vertical-align:text-bottom;
-	border: 0; 
-}
 
