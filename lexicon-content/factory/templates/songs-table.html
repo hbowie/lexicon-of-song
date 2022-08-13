@@ -26,12 +26,15 @@
 <h2>List of Songs</h2>
 
 <div class="lex-content">
-<table>
+
+<p>Click on one of the column headings to sort the table by that column; click again to sort in descending sequence. </p>
+
+<table id="songs-table">
 	<thead>
 		<tr>
-			<th>Title of Song</th>
-			<th>Year Written</th>
-			<th>Songwriters</th>
+			<th onclick="sortTable(0)">Title of Song</th>
+			<th onclick="sortTable(1)">Year Written</th>
+			<th onclick="sortTable(2)">Songwriters</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -46,9 +49,10 @@
 
 	</tbody>
 </table>
+
 </div> <!  end of lex-content div -->
 
 		</div>  <!-- end of wrapper div -->
-		
+    <script src="js/sort-songs.js"></script>
 	</body>
 </html>

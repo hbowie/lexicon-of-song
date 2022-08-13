@@ -67,6 +67,11 @@ p {
 	margin-block-start: 0.5em;
 }
 
+p.line-spacer {
+	margin: 0;
+	padding: 0;
+}
+
 /* --------------------------------------------------
 
 	Images
