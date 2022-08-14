@@ -425,4 +425,49 @@ ul.tags-cloud a {
   text-align: center; 
 } 
 
+/* --------------------------------------------------
+
+	Page Footer
+	
+ * -------------------------------------------------- */
+
+.back-to-top {
+  background-color: #C06E6C; 
+  border: none;
+  color: #211E1F;
+  padding: 15px 32px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-family: 'concourse_t4regular', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-radius: 10px;
+  float: right;
+  cursor: pointer:
+}
+
+.back-to-top a {
+	text-decoration: none;
+	border-bottom: 0;
+	color: inherit;
+}
+
+.back-to-top a:link {
+	text-decoration: none;
+	border-bottom: 0;
+	color: inherit;
+}
+
+.back-to-top a:hover {
+	text-decoration: none;
+	border-bottom: 0;
+	color: inherit;
+}
+
+.back-to-top a:visited {
+	text-decoration: none;
+	border-bottom: 0;
+	color: inherit;
+}
 
