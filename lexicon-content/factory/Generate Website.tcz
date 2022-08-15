@@ -1,19 +1,19 @@
 module	action	modifier	object	value
 
-<!-- Read the content notes for the website  -->
+<!-- Step 1: Read the content notes for the website.  -->
 
 input	set		xpltags	false
 input	set		dirdepth	1
 input	open	notenik-defined		#PATH#../
 
-<!-- Sort posts in descending order by date of post  -->
+<!-- Step 2: Sort posts in descending order by date of post.  -->
 
 sort	clear			
 sort	add	descending	Date of Essay	
 sort	add	ascending	Title	
 sort	set		params	
 
-<!-- Filter to include only posts  -->
+<!-- Step 3: Filter to include only posts.  -->
 
 filter	clear			
 filter	add	eq	Class	post
