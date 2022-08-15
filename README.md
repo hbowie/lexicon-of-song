@@ -50,5 +50,30 @@ The script file is a tab-delimited file with five columns. The first line of the
 
 	This step filters the Collection so that only Notes with `class` equal to `post` will be considered in the next steps. 
 	
-	
++ Step 4: Process merge templates for posts. 
+
+	We have three different templates that require posts as input. The first one formats a file to be placed in the `includes-gen` folder, which will then be included into another template later. The second template just produces one HTML page per post. Note that sort sequence doesn't really matter here, but the filtering criteria are important. And then the third template produces an RSS feed for the site. 
+
++ Steps 5 - 6: Process Posts in Ascending order. 
 		
+	The filtering criteria for posts are still in effect, but we have one page where we want to see all posts in ascending order. So we will change the sort, and then process that merge template. 
+		
++ Steps 7 - 9: Produce the basic pages. 
+
+	We change the filter criteria here, but we don't worry about sorting, because sequence doesn't make any difference for these pages. 
+	
++ Steps 9 - 10: Produce the home page. 
+
+	Since this is only one page, sequence is irrelevant. Note that this is where we include the latest posts from the `includes-gen` folder. 
+	
++ Step 11: Generate default CSS. 
+
+	Note that this will only happen when the `styles.css` file does not already exist, so it can be modified as needed later, without fear of it being overwritten. 
+	
++ Step 12: Open the just-generated site in the user's Web browser. 
+
+	This assumes you have Apache suitably configured and running on your Mac. 
+
+And there you have it!
+
+
