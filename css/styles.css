@@ -400,9 +400,17 @@ img {
   height: auto; 
 } 
 
-ul.checklist { list-style-type: none; }
+/* --------------------------------------------------
+
+	Tags Cloud
+	
+ * -------------------------------------------------- */
+
+
 ul.tags-list { list-style-type: none; }
+
 ul.tags-cloud { 
+  border: none;
   list-style: none; 
   padding-left: 0; 
   display: flex; 
@@ -410,19 +418,41 @@ ul.tags-cloud {
   align-items: center; 
   justify-content: center; 
   line-height: 2.5rem; 
-} 
-ul.tags-cloud a { 
-  display: block; 
+  font-family: 'concourse_t3regular', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.1rem; 
   font-weight: 600; 
+} 
+
+ul.tags-cloud a { 
+  display: block; 
+  position: relative;
+
   text-decoration: none; 
-  position: relative; 
-  border-radius: 15px; 
-  background-color: var(--highlight-color); 
-  padding: 2px 12px 2px 12px; 
+  border-bottom: 0;
+   
+  color: inherit;
+
+  border-radius: 10px; 
+  background-color: #C06E6C; 
+  color: #211E1F;
+  padding: 1px 12px 1px 12px; 
   margin: 10px 10px 10px 10px; 
   min-width: 40px; 
   text-align: center; 
+} 
+
+ul.tags-cloud a:link { 
+  text-decoration: none; 
+  border-bottom: 0;
+  color: inherit;
+  color: #211E1F;
+} 
+
+ul.tags-cloud a:visited { 
+  text-decoration: none; 
+  border-bottom: 0;
+  color: inherit;
+  color: #211E1F;
 } 
 
 /* --------------------------------------------------
@@ -470,4 +500,6 @@ ul.tags-cloud a {
 	border-bottom: 0;
 	color: inherit;
 }
+
+ul.checklist { list-style-type: none; }
 
