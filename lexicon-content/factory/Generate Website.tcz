@@ -19,7 +19,7 @@ filter	clear
 filter	add	eq	Class	post
 filter	set		params	
 
-<!-- Process Merge Templates for posts  -->
+<!-- Step 4: Process Merge Templates for posts  -->
 
 template	webroot			/Users/hbowie/Sites/lexicon-of-song
 template	open			#PATH#templates/recent-posts.html
@@ -29,19 +29,19 @@ template	generate
 template	open			#PATH#templates/rss.xml
 template	generate			
 
-<!-- Sort posts in ascending order by title  -->
+<!-- Step 5: Sort posts in ascending order by title  -->
 
 sort	clear			
 sort	add	ascending	Title	
 sort	set		params	
 
-<!-- Process Merge Template for posts sorted by title  -->
+<!-- Step 6:Process Merge Template for posts sorted by title  -->
 
 template	webroot			/Users/hbowie/Sites/lexicon-of-song
 template	open			#PATH#templates/songs-table.html
 template	generate			
 
-<!-- Filter to include only basic pages  -->
+<!-- Step 7: Filter to include only basic pages  -->
 
 filter	clear			
 filter	set		params	
@@ -49,13 +49,13 @@ filter	clear
 filter	add	eq	Class	page
 filter	set		params	
 
-<!-- Process Merge Template for basic pages  -->
+<!-- Step 8: Process Merge Template for basic pages  -->
 
 template	webroot			/Users/hbowie/Sites/lexicon-of-song
 template	open			#PATH#templates/basic-page.html
 template	generate			
 
-<!-- Filter to include only index page  -->
+<!-- Step 9: Filter to include only index page  -->
 
 filter	clear			
 filter	set		params	
@@ -63,17 +63,17 @@ filter	clear
 filter	add	eq	Class	index
 filter	set		params	
 
-<!-- Process Merge Template for index page  -->
+<!-- Step 10: Process Merge Template for index page  -->
 
 template	webroot			/Users/hbowie/Sites/lexicon-of-song
 template	open			#PATH#templates/index-page.html
 template	generate			
 
-<!-- Generate default css  -->
+<!-- Step 11: Generate default css  -->
 
 template	open			#PATH#templates/css-starter.css
 template	generate			
 
-<!-- Open the site in default web browser -->
+<!-- Step 12: Open the site in default web browser -->
 
 browse	open	url		http://localhost/~hbowie/lexicon-of-song/
