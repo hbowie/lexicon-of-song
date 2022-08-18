@@ -8,11 +8,11 @@
     color-scheme: light dark;
     --background-color: #FFFFFF;
     --text-color: #000000;
-    --link-color: #0000F0;
-	  --subtle-link-color: #0000FF;
+    --link-color: #5D779D;
+	  --subtle-link-color: #5D779D;
     --highlight-color: Gainsboro;
     --red-text-color: #8A4D4C;
-    --nav-color: #8B4E4E;
+    --nav-color: #985653;
     --navbg-color: #E0E0E0;
     --navbg-color-hover: #B0B0B0;
     --navbg-color-active: #C0C0C0;
@@ -354,6 +354,19 @@ table.song-table {
 	font-family: inherit;
 	font-weight: normal;
 	margin-bottom: 0.6em;
+	color: var(--text-color);
+}
+
+.song-title-slug a:link {
+	color: var(--text-color);
+	text-decoration: none;
+	border-bottom: 0;
+}
+
+.song-title-slug a:visited {
+	color: var(--text-color);
+	text-decoration: none;
+	border-bottom: 0;
 }
 
 .song-info-label {
@@ -382,7 +395,20 @@ img.song-image {
 }
 
 .read-more {
-	font-style: italic;
+	color: #FFFFFF;
+	background-color: #0d6efd;
+	border-color: #0d6efd;
+	display: inline-block;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1 px solid transparent;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	border-radius: 0.25rem;
 }
 
 blockquote { 
