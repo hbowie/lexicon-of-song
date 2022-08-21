@@ -83,7 +83,9 @@
 	</tr>
 </table>
 
+<?if "=$image-name$=" ?>
 <?copyfile "../../files/=$imagename$=" "../../../images/=$imagename&f$=" ?>
+<?endif?>
 
 <div class="lex-content">
 <img class="song-image" src="=$relative$=images/=$image-name&f$=" alt="=$image-alt$=">

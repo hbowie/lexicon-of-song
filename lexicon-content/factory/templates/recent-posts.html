@@ -1,5 +1,8 @@
 <?output "../includes-gen/recent-posts.html"?>
+<?set song-count = 0 ?>
 <?nextrec?>
+<?set song-count += 1 ?>
+<?if =$song-count$= <= 10 ?>
 
 <div class="lex-content">
 
@@ -20,4 +23,5 @@
 </div>
 
 <a class="read-more" href="=$title&f$=.html">Read more&hellip;</a>
+<?endif?>
 <?loop?>
