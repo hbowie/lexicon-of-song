@@ -83,14 +83,20 @@
 	</tr>
 </table>
 
+<div class="lex-content">
 <?if "=$image-name$=" ?>
 <?copyfile "../../files/=$imagename$=" "../../../images/=$imagename&f$=" ?>
+<?if "=$apple-music-link$=" >
+<a href="=$apple-music-link$=">
 <?endif?>
-
-<div class="lex-content">
 <img class="song-image" src="=$relative$=images/=$image-name&f$=" alt="=$image-alt$=">
+<?if "=$apple-music-link$=">
+</a>
+<?endif?>
+<?endif?>
 =$body&w1o$=
 </div>
+
 
 <p class="line-spacer"> &nbsp; </p>
 
