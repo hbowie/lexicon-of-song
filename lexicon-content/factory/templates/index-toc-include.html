@@ -1,0 +1,11 @@
+<?output "../includes-gen/index-toc.html"?>
+<p>
+<?nextrec?>
+<?definegroup 1 =$initialletter$= ?>
+<?ifendgroup 1 ?>
+<?endif?>
+<?ifnewgroup 1 ?>
+<a href="#letter-=$initialletter&l$=">=$initialletter$=</a>
+<?endif?>
+<?loop?>
+</p>
