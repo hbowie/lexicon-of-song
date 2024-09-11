@@ -8,17 +8,23 @@ Sort Parm: 0
 
 Sort Descending: false
 
+Sort Blank Dates Last: true
+
 Other Fields Allowed: false
 
-Last Index Selected: 35
+Last Index Selected: 28
 
 Mirror Auto Index: false
 
 Display Body Label: true
 
+Minimum Body Edit View Height: 5.0
+
 Title Display Option: h2
 
-Streamlined Reading: false
+Display Mode: normal
+
+Override Custom Display: false
 
 MathJax: false
 
@@ -28,13 +34,17 @@ Missing Targets: false
 
 Curly Apostrophes: true
 
+Ext Links Open in New Windows: true
+
+Scrolling Sync: false
+
 Shortcut: lex
 
 Note File Format: nnk
 
 Hash Tags: false
 
-Window Numbers: 70.0;0.0;1245.0;1415.0;500.0;
+Window Numbers: 1460.0;122.0;1100.0;1266.0;500.0;
 
-Column Widths: statusdigit: 20, 30, 50; rank: 50, 80, 250; date: 80, 120, 500; klass: 60, 80, 150; tags: 50, 100, 1200; x: 12, 20, 50; title: 200, 486, 1500; datemod: 100, 180, 250; seq: 30, 80, 250; author: 100, 200, 1000; dateadded: 100, 180, 250; 
+Column Widths: tags: 50, 100, 1200; dateadded: 100, 180, 250; date: 80, 120, 500; statusdigit: 20, 30, 50; klass: 60, 80, 150; x: 12, 20, 50; datemod: 100, 180, 250; rank: 50, 80, 250; seq: 30, 80, 250; author: 100, 200, 1000; title: 200, 486, 1500; 
 
