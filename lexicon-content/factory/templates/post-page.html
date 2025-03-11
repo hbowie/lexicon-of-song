@@ -81,6 +81,30 @@
 			</p>
 		</td>
 	</tr>
+	<tr class="song-row">
+		<td colspan="2">
+			<p class="song-info-label">
+				To Listen:
+			</p>
+			<p class="song-info-value">
+<?if "=$apple-music-link$=" ?>
+				<a class="to-listen" target="_blank" href="=$apple-music-link$=">
+					Apple Music
+				</a>
+<?endif?>
+<?if "=$youtube-link$=" ?>
+				<a class="to-listen" target="_blank" href="=$youtube-link$=">
+					YouTube
+				</a>
+<?endif?>
+<?if "=$spotify-link$=" ?>
+				<a class="to-listen" target="_blank" href="=$spotify-link$=">
+					Spotify
+				</a>
+<?endif?>
+			</p>
+		</td>
+	</tr>
 </table>
 
 <div class="lex-content">
@@ -95,8 +119,12 @@
 <?endif?>
 <?endif?>
 =$body&w1o$=
-</div>
 
+<?if "=$komments-link$=" ?>
+<hr />
+<p>Thanks for reading! If you'd like to comment on this post, or see what others have said about it, then <a class="ext-link" target="_blank" rel="noopener" href="=$komments-link$=">click here</a>. </p>
+<?endif?>
+</div>
 
 <p class="line-spacer"> &nbsp; </p>
 
